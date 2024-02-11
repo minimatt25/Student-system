@@ -1,24 +1,29 @@
-public class student {
-    String id;
-    String name;
-    int year;
-    int group;
+import java.io.Serializable;
+
+public class student implements Serializable {
+    private final int id;
+    private final String Fname;
+    private final String Lname;
+    private final int year;
+    private final int group;
 
     public student(){
-        id = "not assigned";
-        name = "unknown";
+        id = 0 ;
+        Fname = "unknown";
+        Lname = "unknown";
         year = 0;
         group = 0;
     }
-    public student(String newid, String newName, int newYear, int newGroup){
+    public student(int newid, String newFname, String newLname, int newYear, int newGroup){
         id = newid;
-        name = newName;
+        Fname = newFname;
+        Lname = newLname;
         year = newYear;
         group = newGroup;
     }
 
     public String toString(){
-        return "id: " + id + "\nname: " + name + "\nyear: " + year + "\ngroup: " + group;
+        return "id: " + id + "\nfirst name: " + Fname + "\nlast name: " + Lname +"\nyear: " + year + "\ngroup: " + group;
     }
 }
 
